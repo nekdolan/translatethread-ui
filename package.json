@@ -1,0 +1,23 @@
+{
+  "name": "ui",
+  "version": "0.0.1",
+  "description": "translate thread",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "author": "Rajat Jindal",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.5",
+    "nuxt": "^2.15.3",
+    "vue-clipboard2": "^0.3.1",
+    "vue-moment": "^4.1.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^4.1.2",
+    "postcss": "^8.2.15"
+  }
+}
