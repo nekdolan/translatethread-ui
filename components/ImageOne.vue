@@ -1,7 +1,7 @@
 <template>
   <div :class="classWithDynamicHeight(entity)">
     <img
-      v-on:click="showModal = true"
+      v-on:click="clicked(0)"
       :src="entity.media_url_https"
       class="min-w-full min-h-full"
     />
@@ -9,6 +9,7 @@
       v-if="showModal"
       :mediaEntities="mediaEntities"
       v-on:close="showModal = false"
+      :clickedIndex="clickedIndex"
     />
   </div>
 </template>
@@ -23,6 +24,7 @@ export default {
   data() {
     return {
       showModal: false,
+      clickedIndex: -1,
     };
   },
   methods: {
@@ -63,6 +65,10 @@ export default {
       }
 
       return calculatedHeight;
+    },
+    clicked: function(index) {
+      this.clickedIndex = index;
+      this.showModal = true;
     },
   },
   computed: {

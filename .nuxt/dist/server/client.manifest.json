@@ -2,8 +2,8 @@
   "publicPath": "/_nuxt/",
   "all": [
     "../server/index.spa.html",
-    "3e73466.js",
-    "80a827e.js",
+    "1131d4b.js",
+    "2ab6b7e.js",
     "8e2beea.js",
     "LICENSES",
     "b5f5211.js",
@@ -12,13 +12,13 @@
     "ed83702.js"
   ],
   "initial": [
-    "3e73466.js",
+    "1131d4b.js",
     "d33cb7d.js",
     "cabbc2f.js",
     "ed83702.js"
   ],
   "async": [
-    "80a827e.js",
+    "2ab6b7e.js",
     "8e2beea.js",
     "b5f5211.js"
   ],
@@ -758,7 +758,7 @@
     "1cefb961": [
       2
     ],
-    "114a1dc0": [
+    "09fa4a6b": [
       2
     ],
     "646c6f7b": [
@@ -782,7 +782,7 @@
     "e71c135a": [
       2
     ],
-    "5513d304": [
+    "2fd5206e": [
       2
     ],
     "7233133e": [
@@ -882,10 +882,10 @@
   },
   "assetsMapping": {
     "6fca0322": [
-      "3e73466.js"
+      "1131d4b.js"
     ],
     "aaf756c4": [
-      "80a827e.js"
+      "2ab6b7e.js"
     ],
     "af347154": [
       "8e2beea.js"
