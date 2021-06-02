@@ -3,12 +3,14 @@
     "name": "thread-id",
     "path": "/thread/:id?",
     "component": "/Users/rajatjindal/go/src/github.com/rajatjindal/translatethread-ui/pages/thread/_id.vue",
-    "chunkName": "pages/thread/_id"
+    "chunkName": "pages/thread/_id",
+    "_name": "_24a4c2d6"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/rajatjindal/go/src/github.com/rajatjindal/translatethread-ui/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_0f7a0f22"
   }
 ]
