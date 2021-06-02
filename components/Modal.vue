@@ -19,10 +19,35 @@
         From: "opacity-100"
         To: "opacity-0"
     -->
+
       <div
-        class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        class="fixed inset-0 bg-gray-900 bg-opacity-95 transition-opacity"
         aria-hidden="true"
       ></div>
+
+      <div
+        v-if="currentIndex > 0"
+        class="fixed absolute inset-y-1/2 inset-x-1/4"
+      >
+        <div
+          class="text-gray-100 bg-gray-900 rounded-full py-4 font-bold w-16 h-16"
+          v-on:click="currentIndex -= 1"
+        >
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div
+        v-if="currentIndex < mediaEntities.length - 1"
+        class="fixed absolute inset-y-1/2 inset-x-3/4"
+      >
+        <div
+          class="text-gray-100 bg-gray-900 rounded-full py-4 font-bold w-16 h-16"
+          v-on:click="currentIndex += 1"
+        >
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+      </div>
 
       <!-- This element is to trick the browser into centering the modal contents. -->
       <span
@@ -42,34 +67,15 @@
         To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     -->
       <div
-        class="inline-block align-bottom bg-white rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        class="inline-block align-bottom rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
       >
         <div class="flex">
-          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            <div
-              v-for="(entity, index) in mediaEntities"
-              :key="entity.media_url_https"
-            >
-              <div
-                v-if="index > 0"
-                class="text-gray-900 border-2 border-gray-900 mr-10 my-auto font-bold w-10 h-10"
-                v-on:click="alert('works')"
-              >
-                <i class="py-2 px-2 fa fa-arrow-left" aria-hidden="true"></i>
-              </div>
-              <img :src="entity.media_url_https" />
-              <div
-                v-if="index < mediaEntities.length - 1"
-                class="text-gray-900 border-2 border-gray-900 ml-10 my-auto font-bold w-10 h-10"
-                v-on:click="alert('works')"
-              >
-                <i class="py-2 px-2 fa fa-arrow-right" aria-hidden="true"></i>
-              </div>
-            </div>
+          <div class="flex overflow-hidden rounded-2xl">
+            <img :src="mediaEntities[currentIndex].media_url_https" />
           </div>
           <div
             v-on:click="$emit('close', '')"
-            class="-mt-10 -mr-20 text-2xl text-gray-800"
+            class="-mt-10 -mr-20 text-2xl text-gray-100"
           >
             <i class="far fa-times-circle"></i>
           </div>
@@ -81,6 +87,11 @@
 <script>
 export default {
   name: "Modal",
-  props: ["mediaEntities"],
+  props: ["mediaEntities", "clickedIndex"],
+  data() {
+    return {
+      currentIndex: this.clickedIndex,
+    };
+  },
 };
 </script>

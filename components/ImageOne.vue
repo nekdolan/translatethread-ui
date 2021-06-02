@@ -34,7 +34,7 @@ export default {
       return (
         "h-" +
         this.calculatedHeight(entity) +
-        " w-full mt-5 border border-gray-300 rounded rounded-lg p-0.5 overflow-hidden"
+        " w-full mt-5 border border-gray-300 rounded rounded-xl overflow-hidden"
       );
     },
     calculatedHeight: function(entity) {
