@@ -23,6 +23,7 @@
       <div
         class="fixed inset-0 bg-gray-900 bg-opacity-95 transition-opacity"
         aria-hidden="true"
+        v-on:click="$emit('close', '')"
       ></div>
 
       <div
