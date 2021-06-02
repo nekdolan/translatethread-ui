@@ -41,6 +41,7 @@ export default {
     '~/plugins/vue-netlify',
     '~/plugins/vue-moment',
     '~/plugins/vue-clipboard',
+    '~/plugins/vue-userinfo',
   ],
   /*
   ** Nuxt.js modules

@@ -17,11 +17,11 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
     Tweet,
-    Summary
+    Summary,
   },
   data() {
     return {
-      threadObject: {}
+      threadObject: {},
     };
   },
   mounted: function() {
@@ -32,10 +32,10 @@ export default {
   },
   beforeMount: function() {
     this.fetchTranslatedThread(this.$route.params.id)
-      .then(res => {
+      .then((res) => {
         this.threadObject = res.data;
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.response);
       });
   },
@@ -45,10 +45,10 @@ export default {
       if (hash && document.querySelector(hash)) {
         location.href = hash;
       }
-    }
+    },
   },
   computed: {
-    ...mapGetters("thread", ["getTranslatedThread"])
-  }
+    ...mapGetters("thread", ["getTranslatedThread"]),
+  },
 };
 </script>

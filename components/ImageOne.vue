@@ -1,13 +1,30 @@
 <template>
   <div :class="classWithDynamicHeight(entity)">
-    <img :src="entity.media_url_https" class="min-w-full min-h-full" />
+    <img
+      v-on:click="showModal = true"
+      :src="entity.media_url_https"
+      class="min-w-full min-h-full"
+    />
+    <modal
+      v-if="showModal"
+      :mediaEntities="mediaEntities"
+      v-on:close="showModal = false"
+    />
   </div>
 </template>
 
 <script>
+import Modal from "./Modal.vue";
+
 export default {
   name: "ImageOne",
   props: ["mediaEntities"],
+  components: { Modal },
+  data() {
+    return {
+      showModal: false,
+    };
+  },
   methods: {
     classWithDynamicHeight: function(entity) {
       // at some stage use name=360x360 format to enhance image handling
@@ -46,7 +63,7 @@ export default {
       }
 
       return calculatedHeight;
-    }
+    },
   },
   computed: {
     entity: function() {
@@ -55,7 +72,7 @@ export default {
       }
 
       return this.mediaEntities[0];
-    }
-  }
+    },
+  },
 };
 </script>

@@ -6,7 +6,7 @@
           <div class="ml-2 w-1/12 lg:w-1/12 text-right mt-1 lg:mr-2">
             <img
               class="w-8 h-8 lg:w-12 lg:h-12 rounded-full"
-              src="https://pbs.twimg.com/profile_images/1113640674274865152/cvVnlVw1_400x400.png"
+              :src="userInfo.profilePhoto"
             />
           </div>
           <div
@@ -21,14 +21,20 @@
             "
           >
             <div class="flex lg:flex-col text-left">
-              <div>
-                <span class="font-semibold text-sm">
+              <div class="flex">
+                <span class="flex font-semibold text-sm">
                   {{ tweet.Author }}
+                  <img
+                    v-if="userInfo.verified"
+                    class="h-3 w-3 ml-1 mt-1"
+                    src="https://translatethread.com/images/Twitter_Verified_Badge.svg"
+                  />
                 </span>
-                <span class="text-gray-500 text-sm ml-1 lg:ml-0">
+
+                <span class="text-gray-500 text-sm ml-1">
                   @{{ tweet.AuthorHandle }}
                 </span>
-                <span class="mt-5 text-left text-gray-500 text-xs">
+                <span class="mt-0.5 ml-1 text-left text-gray-500 text-xs">
                   · {{ getDate(tweet.TweetedAt) }}
                 </span>
               </div>
@@ -96,12 +102,24 @@ import ImageOne from "./ImageOne.vue";
 import ImageTwo from "./ImageTwo.vue";
 import ImageThree from "./ImageThree.vue";
 import ImageFour from "./ImageFour.vue";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: { ImageOne, ImageTwo, ImageThree, ImageFour },
   name: "Tweet",
   props: ["tweet"],
+  beforeMount: function() {
+    this.fetchUserInfo(this.tweet.AuthorID);
+  },
   computed: {
+    ...mapGetters("userinfo", ["getUserInfo"]),
+    userInfo: function() {
+      if (!this.getUserInfo(this.tweet.AuthorID)) {
+        return {};
+      }
+
+      return this.getUserInfo(this.tweet.AuthorID);
+    },
     newLinesInterpreted: function() {
       if (!this.tweet || !this.tweet.TranslatedText) {
         return;
@@ -119,9 +137,10 @@ export default {
         "#" +
         this.tweet.ID
       );
-    }
+    },
   },
   methods: {
+    ...mapActions({ fetchUserInfo: "userinfo/fetchUserInfo" }),
     getDate: function(d) {
       const dateMoment = this.$moment(d);
       const todayMoment = this.$moment();
@@ -142,7 +161,7 @@ export default {
       }
 
       return dateMoment.format("MMM DD, YYYY");
-    }
-  }
+    },
+  },
 };
 </script>
