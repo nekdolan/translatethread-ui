@@ -6,6 +6,7 @@
           class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-tl-xl"
         >
           <img
+            class="h-full w-full"
             v-on:click="clicked(0)"
             :src="mediaEntities[0].media_url_https"
             id="1"
@@ -15,6 +16,7 @@
           class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-bl-xl mt-0.5"
         >
           <img
+            class="h-full w-full"
             v-on:click="clicked(1)"
             :src="mediaEntities[1].media_url_https"
             id="2"
@@ -27,6 +29,7 @@
           class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-tr-xl"
         >
           <img
+            class="h-full w-full"
             v-on:click="clicked(2)"
             :src="mediaEntities[2].media_url_https"
             id="3"
@@ -36,6 +39,7 @@
           class="h-1/2 border border-gray-300 overflow-hidden rounded-br-xl mt-0.5"
         >
           <img
+            class="h-full w-full"
             v-on:click="clicked(3)"
             :src="mediaEntities[3].media_url_https"
             id="4"

@@ -42,7 +42,7 @@
             <div class="mt-2 mr-4 text-left text-sm">
               <p v-html="newLinesInterpreted"></p>
             </div>
-            <div v-if="tweet.MediaEntities" class="-ml-4 mr-4 lg:mr-0 lg:ml-0">
+            <div v-if="tweet.MediaEntities" class="mr-4 lg:mr-0 lg:ml-0">
               <image-one
                 v-if="tweet.MediaEntities.length == 1"
                 :mediaEntities="tweet.MediaEntities"
@@ -62,7 +62,7 @@
             </div>
             <div class="flex">
               <div
-                class="mt-1 ml-1 text-left text-gray-500 hover:text-gray-900"
+                class="mt-1 lg:ml-0 text-left text-xs text-blue-400 hover:text-blue-500"
               >
                 <a
                   :href="
@@ -73,21 +73,9 @@
                   "
                   target="_blank"
                   title="Original Tweet"
-                  ><i class="fas fa-language"></i
-                ></a>
-              </div>
-
-              <div
-                class="
-                  mt-2
-                  ml-1
-                  text-left text-gray-500 text-xs
-                  hover:text-gray-900
-                "
-              >
-                <a v-clipboard:copy="permaLink" title="Copy Permalink"
-                  ><i class="fas fa-link"></i
-                ></a>
+                  ><i class="fas text-xs fa-external-link-alt"></i> Original
+                  Tweet
+                </a>
               </div>
             </div>
           </div>
