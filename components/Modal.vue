@@ -26,12 +26,15 @@
         v-on:click="$emit('close', '')"
       ></div>
 
-      <div
-        v-if="currentIndex > 0"
-        class="fixed absolute inset-y-1/2 inset-x-1/4"
-      >
+      <div class="fixed absolute top-4 right-4">
+        <div v-on:click="$emit('close', '')">
+          <i class="text-gray-100 text-xl far fa-times-circle"></i>
+        </div>
+      </div>
+
+      <div v-if="currentIndex > 0" class="fixed absolute left-4 top-1/2">
         <div
-          class="text-gray-100 bg-gray-900 rounded-full py-4 font-bold w-16 h-16"
+          class="text-gray-100 bg-gray-900 rounded-full py-5 font-bold w-16 h-16"
           v-on:click="currentIndex -= 1"
         >
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -40,10 +43,11 @@
 
       <div
         v-if="currentIndex < mediaEntities.length - 1"
-        class="fixed absolute inset-y-1/2 inset-x-3/4"
+        class="fixed absolute right-4 top-1/2"
       >
         <div
-          class="text-gray-100 bg-gray-900 rounded-full py-4 font-bold w-16 h-16"
+          class="text-gray-100 bg-gray-900 rounded-full py-5 font-bold w-16 h-16"
+          v-on:keyup.right="window.alert('hello')"
           v-on:click="currentIndex += 1"
         >
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -54,7 +58,7 @@
       <span
         class="hidden sm:inline-block sm:align-middle sm:h-screen"
         aria-hidden="true"
-        >&#8203;</span
+        >&#8203; where is this buddy</span
       >
 
       <!--
@@ -68,18 +72,10 @@
         To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     -->
       <div
-        class="inline-block align-bottom rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        class="inline-block border-2 border-red-900 align-bottom rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
       >
-        <div class="flex">
-          <div class="flex overflow-hidden rounded-2xl">
-            <img :src="mediaEntities[currentIndex].media_url_https" />
-          </div>
-          <div
-            v-on:click="$emit('close', '')"
-            class="-mt-10 -mr-20 text-2xl text-gray-100"
-          >
-            <i class="far fa-times-circle"></i>
-          </div>
+        <div class="overflow-hidden rounded-2xl">
+          <img :src="mediaEntities[currentIndex].media_url_https" />
         </div>
       </div>
     </div>
