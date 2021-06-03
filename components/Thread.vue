@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full mt-1 lg:mt-4">
+  <div class="h-full mt-1 lg:mt-4 items-right">
     <Summary :summary="threadObject.Summary" />
     <Tweet
       v-for="tweet in threadObject.Thread"

@@ -46,6 +46,6 @@
 <script>
 export default {
   name: "Summary",
-  props: ["summary"]
+  props: ["summary"],
 };
 </script>

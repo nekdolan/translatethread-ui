@@ -1,5 +1,5 @@
 <template>
-  <div :id="tweet.ID" class="mx-auto lg:max-w-5xl text-center">
+  <div :id="tweet.ID" class="mx-auto text-center">
     <div class="grid grid-cols grid-cols-1 lg:mt-4">
       <div class="mx-auto col-1 w-full lg:w-3/5 hover:bg-gray-50 pt-4">
         <div class="flex w-full">
