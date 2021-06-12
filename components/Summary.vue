@@ -3,39 +3,43 @@
     v-if="summary"
     class="text-center mx-auto max-w-xl border-b border-gray-500 border-opacity-10 pb-2"
   >
-    <div class="grid grid-cols grid-cols-8 lg:grid-cols-12 mx-auto">
-      <div class="hidden lg:inline col-span-2 border-r">
-        <div class="hover:text-gray-900 text-blue-500">
+    <div class="grid grid-cols grid-cols-6 lg:grid-cols-12 mx-auto">
+      <div class="hidden lg:inline col-span-3 border-r my-auto">
+        <div
+          class="text-xs border border-blue-200 text-blue-600 hover:bg-blue-100 hover:text-blue-700 mx-2 my-2 rounded rounded-lg w-28 py-1 px-1"
+        >
           <a href="">
-            <p class="px-4 -mt-0.5">
-              <i class="fab fa-twitter" alt="tweet"></i>
+            <p class="mr-0.5 text-xs font-semibold">
+              <i class="fab fa-twitter text-blue-400" alt="tweet"></i>
+              Tweet Thread
             </p>
-            <p class="text-xs">Tweet Thread</p>
           </a>
         </div>
       </div>
 
-      <div class="col-span-3 border-r">
+      <div class="col-span-2 border-r">
         <p class="text-sm">{{ summary.TweetCount }}</p>
         <p class="text-xs text-gray-500 mt-0.5">
-          # of tweets in thread
+          # of tweets
         </p>
       </div>
-      <div class="col-span-3 border-r">
+      <div class="col-span-2 border-r">
         <p class="text-sm">{{ summary.CharCount }}</p>
-        <p class="text-xs text-gray-500 mt-0.5">characters translated</p>
+        <p class="text-xs text-gray-500 mt-0.5">characters</p>
       </div>
       <div class="col-span-2 border-r">
         <p class="text-sm">{{ summary.TimeTaken }}</p>
         <p class="text-xs text-gray-500 mt-0.5">to translate</p>
       </div>
-      <div class="col-span-2 hidden lg:inline">
-        <div class="hover:text-gray-900 text-blue-500">
+      <div class="col-span-2 hidden lg:inline  my-auto">
+        <div
+          class="border border-blue-200 text-blue-600 hover:bg-blue-100 hover:text-blue-700  mx-2 my-2 w-20 rounded rounded-lg px-1 py-1"
+        >
           <a target="_blank" href="https://twitter.com/translatethread">
-            <p class="px-4 -mt-0.5">
-              <i class="fas fa-user-plus" alt="tweet"></i>
+            <p class="text-xs font-semibold">
+              <i class="mr-0.5 fas fa-user-plus text-blue-400" alt="tweet"></i>
+              Follow
             </p>
-            <p class="text-xs">Follow Me</p>
           </a>
         </div>
       </div>

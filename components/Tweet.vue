@@ -62,7 +62,7 @@
             </div>
             <div class="flex">
               <div
-                class="mt-1 lg:ml-0 text-left text-xs text-blue-400 hover:text-blue-500"
+                class="mt-1 lg:ml-0 text-left text-xs text-blue-600 hover:text-blue-500"
               >
                 <a
                   :href="
@@ -73,8 +73,8 @@
                   "
                   target="_blank"
                   title="Original Tweet"
-                  ><i class="fas text-xs fa-external-link-alt"></i> Original
-                  Tweet
+                  ><i class="fas text-xs fa-external-link-alt"></i>
+                  Original Tweet
                 </a>
               </div>
             </div>

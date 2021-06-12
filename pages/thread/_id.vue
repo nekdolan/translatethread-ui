@@ -1,9 +1,11 @@
 <template>
   <div>
     <navigation />
-    <div class="flex">
-      <div><QRCode /></div>
-      <thread class="lg:max-w-7xl" />
+    <div class="flex w-full">
+      <div class="hidden lg:block w-2/12">
+        <QRCode />
+      </div>
+      <thread class="lg:max-w-7xl mx-auto lg:mx-0 w-full lg:w-10/12" />
     </div>
     <footer />
   </div>
