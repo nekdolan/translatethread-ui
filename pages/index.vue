@@ -1,21 +1,21 @@
 <template>
   <div>
-    <navigation />
-    <thread />
-    <footer />
+    <Navigation />
+    <Home />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navigation from "~/components/Navigation.vue";
-import Thread from "~/components/Thread.vue";
+import Home from "~/components/Home.vue";
 import Footer from "~/components/Footer.vue";
 
 export default {
   components: {
     Navigation,
-    Thread,
-    Footer
-  }
+    Home,
+    Footer,
+  },
 };
 </script>

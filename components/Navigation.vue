@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0 bg-gray-900">
+  <div class="sticky top-0 bg-gray-900 z-50">
     <div class="mx-auto">
       <div class="bg-gray-900 flex ml-6 py-3 justify-between items-center">
         <div class="flex text-gray-100 w-full lg:w-2/12">
@@ -31,12 +31,12 @@
               >Architecture</a
             >
             <a
-              href="/#acks"
+              href="/#tech"
               class="inline-block p-2 text-indigo-200 hover:text-ceal"
-              >Acknowledgements</a
+              >Technology</a
             >
           </div>
-          <div>
+          <div v-if="false">
             <a
               href="#"
               class="inline-block p-2 text-indigo-200 hover:text-ceal mr-2"
