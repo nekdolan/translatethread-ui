@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       threadObject: {},
-      title: "f1ab Translated Thread",
+      title: "Translated Thread",
     };
   },
   head() {

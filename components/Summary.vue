@@ -6,7 +6,7 @@
     <div class="grid grid-cols grid-cols-6 lg:grid-cols-12 mx-auto">
       <div class="hidden lg:inline col-span-3 border-r my-auto">
         <div
-          class="text-xs border border-blue-200 text-blue-600 hover:bg-blue-100 hover:text-blue-700 mx-2 my-2 rounded rounded-lg w-28 py-1 px-1"
+          class="text-xs border border-blue-200 text-blue-600 hover:bg-blue-100 hover:text-blue-700 mx-2 my-2 rounded-lg w-28 py-1 px-1"
         >
           <a href="">
             <p class="mr-0.5 text-xs font-semibold">
@@ -33,7 +33,7 @@
       </div>
       <div class="col-span-2 hidden lg:inline  my-auto">
         <div
-          class="border border-blue-200 text-blue-600 hover:bg-blue-100 hover:text-blue-700  mx-2 my-2 w-20 rounded rounded-lg px-1 py-1"
+          class="border border-blue-200 text-blue-600 hover:bg-blue-100 hover:text-blue-700  mx-2 my-2 w-20 rounded-lg px-1 py-1"
         >
           <a target="_blank" href="https://twitter.com/translatethread">
             <p class="text-xs font-semibold">
