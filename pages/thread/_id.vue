@@ -5,7 +5,7 @@
       <div class="hidden lg:block w-2/12">
         <QRCode />
       </div>
-      <thread class="lg:max-w-7xl mx-auto lg:mx-0 w-full lg:w-10/12" />
+      <thread class="lg:max-w-7xl w-full lg:w-10/12 lg:-ml-28" />
     </div>
     <footer />
   </div>

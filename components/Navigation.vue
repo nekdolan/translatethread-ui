@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0 bg-gray-900 z-50">
+  <div class="sticky top-0 bg-gray-900 z-10">
     <div class="mx-auto">
       <div class="bg-gray-900 flex ml-6 py-3 justify-between items-center">
         <div class="flex text-gray-100 w-full lg:w-2/12">

@@ -2,9 +2,7 @@
   <div v-if="mediaEntities" class="h-64 w-full mt-5 p-0.5 pr-2 lg:pr-0">
     <div class="flex h-full w-full">
       <div class="flex w-1/2 flex-col ml-0.5">
-        <div
-          class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-tl-xl"
-        >
+        <div class="h-1/2 border border-gray-300 overflow-hidden rounded-tl-xl">
           <img
             class="h-full w-full"
             v-on:click="clicked(0)"
@@ -13,7 +11,7 @@
           />
         </div>
         <div
-          class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-bl-xl mt-0.5"
+          class="h-1/2 border border-gray-300 overflow-hidden rounded-bl-xl mt-0.5"
         >
           <img
             class="h-full w-full"
@@ -25,9 +23,7 @@
       </div>
 
       <div class="flex w-1/2 flex-col ml-0.5">
-        <div
-          class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-tr-xl"
-        >
+        <div class="h-1/2 border border-gray-300 overflow-hidden rounded-tr-xl">
           <img
             class="h-full w-full"
             v-on:click="clicked(2)"

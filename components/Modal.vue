@@ -26,16 +26,13 @@
         v-on:click="$emit('close', '')"
       ></div>
 
-      <div class="fixed absolute bottom-8 right-1/2 sm:top-4 sm:right-4">
+      <div class="fixed bottom-8 right-1/2 sm:top-4 sm:right-4 z-20">
         <div v-on:click="$emit('close', '')">
           <i class="text-gray-100 text-xl far fa-times-circle"></i>
         </div>
       </div>
 
-      <div
-        v-if="currentIndex > 0"
-        class="fixed absolute left-4 bottom-4 sm:bottom-1/2"
-      >
+      <div v-if="currentIndex > 0" class="fixed left-4 bottom-4 sm:bottom-1/2">
         <div
           class="text-gray-100 bg-gray-900 rounded-full py-5 font-bold w-16 h-16"
           v-on:click="currentIndex -= 1"
@@ -46,7 +43,7 @@
 
       <div
         v-if="currentIndex < mediaEntities.length - 1"
-        class="fixed absolute right-4 bottom-4 sm:bottom-1/2"
+        class="fixed right-4 bottom-4 sm:bottom-1/2"
       >
         <div
           class="text-gray-100 bg-gray-900 rounded-full py-5 font-bold w-16 h-16"
