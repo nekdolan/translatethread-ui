@@ -33,7 +33,7 @@
             <a
               href="/#tech"
               class="inline-block p-2 text-indigo-200 hover:text-ceal"
-              >Technology</a
+              >Acknowledgements</a
             >
           </div>
           <div v-if="false">

@@ -22,6 +22,19 @@ export default {
   data() {
     return {
       threadObject: {},
+      title: "f1ab Translated Thread",
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      link: [
+        {
+          rel: "icon",
+          href: "/favicon.svg",
+          type: "image/x-icon",
+        },
+      ],
     };
   },
   mounted: function() {
@@ -34,6 +47,10 @@ export default {
     this.fetchTranslatedThread(this.$route.params.id)
       .then((res) => {
         this.threadObject = res.data;
+        this.title =
+          this.threadObject.Thread[0].Author +
+          " @" +
+          this.threadObject.Thread[0].AuthorHandle;
       })
       .catch((error) => {
         console.log(error.response);
