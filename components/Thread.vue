@@ -23,6 +23,7 @@ export default {
     return {
       threadObject: {},
       title: "Translated Thread",
+      authorHandle: "",
     };
   },
   head() {
@@ -33,6 +34,75 @@ export default {
           rel: "icon",
           href: "/favicon.svg",
           type: "image/x-icon",
+        },
+      ],
+      meta: [
+        {
+          charset: "utf-8",
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+        {
+          name: "og:title",
+          content: "summary_large_image",
+        },
+        {
+          name: "og:image",
+          content: `https://translatethread.com/${this.$route.params.id}.jpeg`,
+        },
+        {
+          name: "og:image:alt",
+          content: "Translate Thread",
+        },
+        {
+          name: "og:url",
+          content: `https://translatethread.com/thread/${this.$route.params.id}`,
+        },
+        {
+          name: "og:description",
+          content: `translated version of thread by @${this.authorHandle} is available now.`,
+        },
+        {
+          name: "og:image:width",
+          content: "1200",
+        },
+        {
+          name: "og:image:height",
+          content: "628",
+        },
+        {
+          name: "og:image:type",
+          content: "image/png",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          name: "twitter:site",
+          content: "@translatethread",
+        },
+        {
+          name: "twitter:creator",
+          content: "@translatethread",
+        },
+        {
+          name: "twitter:title",
+          content: `successfully translated thread by @${this.authorHandle}`,
+        },
+        {
+          name: "twitter:description",
+          content: `translated version of thread by @ ${this.authorHandle} is available now.`,
+        },
+        {
+          name: "twitter:image",
+          content: `https://translatethread.com/${this.$route.params.id}.jpeg`,
+        },
+        {
+          name: "twitter:domain",
+          content: `https://translatethread.com/thread/${this.$route.params.id}`,
         },
       ],
     };
@@ -51,6 +121,8 @@ export default {
           this.threadObject.Thread[0].Author +
           " @" +
           this.threadObject.Thread[0].AuthorHandle;
+
+        this.authorHandle = this.threadObject.Thread[0].AuthorHandle;
       })
       .catch((error) => {
         console.log(error.response);
