@@ -4,7 +4,7 @@
     class="text-center mx-auto max-w-xl border-b border-gray-500 border-opacity-10 pb-2 mt-2"
   >
     <div class="grid grid-cols grid-cols-6 lg:grid-cols-12 mx-auto">
-      <div class="hidden lg:inline col-span-3 border-r my-auto">
+      <div class="hidden lg:inline col-span-3 border-r border-gray-500 my-auto">
         <div
           class="text-xs border border-blue-200 text-gray-200 hover:bg-blue-100 hover:text-blue-700 mx-2 my-2 rounded-lg w-28 py-1 px-1"
         >
@@ -17,17 +17,17 @@
         </div>
       </div>
 
-      <div class="col-span-2 border-r">
+      <div class="col-span-2 border-r border-gray-500">
         <p class="text-sm text-gray-50">{{ summary.TweetCount }}</p>
         <p class="text-xs text-gray-500 mt-0.5">
           # of tweets
         </p>
       </div>
-      <div class="col-span-2 border-r">
+      <div class="col-span-2 border-r border-gray-500">
         <p class="text-sm text-gray-50">{{ summary.CharCount }}</p>
         <p class="text-xs text-gray-500 mt-0.5">characters</p>
       </div>
-      <div class="col-span-2 lg:border-r">
+      <div class="col-span-2 lg:border-r border-gray-500">
         <p class="text-sm text-gray-50">{{ summary.TimeTaken }}</p>
         <p class="text-xs text-gray-500 mt-0.5">to translate</p>
       </div>
