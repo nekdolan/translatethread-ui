@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="h-full bg-gray-900">
     <navigation />
-    <div class="flex w-full">
-      <div class="hidden lg:block w-2/12">
+    <div class="grid grid-cols grid-cols-12 w-full">
+      <div class="col-span-2 hidden lg:block">
         <QRCode />
       </div>
-      <thread class="lg:max-w-7xl w-full lg:w-10/12 lg:-ml-28" />
+      <thread class="col-start-3 col-span-7 w-full" />
     </div>
-    <footer />
+    <Footer />
   </div>
 </template>
 

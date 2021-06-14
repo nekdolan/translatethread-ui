@@ -1,7 +1,7 @@
 <template>
   <div :id="tweet.ID" class="mx-auto text-center">
-    <div class="grid grid-cols grid-cols-1 lg:mt-4">
-      <div class="mx-auto col-1 w-full lg:w-3/5 hover:bg-gray-50 pt-4">
+    <div class="grid grid-cols grid-cols-1 lg:mt-2">
+      <div class="mx-auto col-1 w-full lg:w-3/5  pt-4">
         <div class="flex w-full">
           <div class="ml-2 w-1/12 lg:w-1/12 text-right mt-1 lg:mr-2">
             <img
@@ -17,7 +17,9 @@
               pb-4
               ml-2
               lg:w-10/12
-              border-b border-gray-500 border-opacity-10
+              text-indigo-100 hover:text-gray-100
+              hover:bg-gray-800
+              border border-gray-500 border-opacity-30 p-4 rounded-xl
             "
           >
             <div class="flex lg:flex-col text-left">
@@ -60,24 +62,7 @@
                 :mediaEntities="tweet.MediaEntities"
               />
             </div>
-            <div class="flex">
-              <div
-                class="mt-1 lg:ml-0 text-left text-xs text-blue-600 hover:text-blue-500"
-              >
-                <a
-                  :href="
-                    'https://twitter.com/' +
-                      tweet.AuthorHandle +
-                      '/status/' +
-                      tweet.ID
-                  "
-                  target="_blank"
-                  title="Original Tweet"
-                  ><i class="fas text-xs fa-external-link-alt"></i>
-                  Original Tweet
-                </a>
-              </div>
-            </div>
+            <TweetActions :tweet="tweet" />
           </div>
         </div>
       </div>
@@ -90,10 +75,11 @@ import ImageOne from "./ImageOne.vue";
 import ImageTwo from "./ImageTwo.vue";
 import ImageThree from "./ImageThree.vue";
 import ImageFour from "./ImageFour.vue";
+import TweetActions from "./TweetActions.vue";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  components: { ImageOne, ImageTwo, ImageThree, ImageFour },
+  components: { ImageOne, ImageTwo, ImageThree, ImageFour, TweetActions },
   name: "Tweet",
   props: ["tweet"],
   beforeMount: function() {
