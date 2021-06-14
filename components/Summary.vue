@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="summary"
-    class="text-center mx-auto max-w-xl border-b border-gray-500 border-opacity-10 pb-2"
+    class="text-center mx-auto max-w-xl border-b border-gray-500 border-opacity-10 pb-2 mt-2"
   >
     <div class="grid grid-cols grid-cols-6 lg:grid-cols-12 mx-auto">
       <div class="hidden lg:inline col-span-3 border-r my-auto">
@@ -27,7 +27,7 @@
         <p class="text-sm text-gray-50">{{ summary.CharCount }}</p>
         <p class="text-xs text-gray-500 mt-0.5">characters</p>
       </div>
-      <div class="col-span-2 border-r">
+      <div class="col-span-2 lg:border-r">
         <p class="text-sm text-gray-50">{{ summary.TimeTaken }}</p>
         <p class="text-xs text-gray-500 mt-0.5">to translate</p>
       </div>

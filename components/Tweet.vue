@@ -16,6 +16,7 @@
               flex-col
               pb-4
               ml-2
+              mr-2
               lg:w-10/12
               text-indigo-100 hover:text-gray-100
               hover:bg-gray-800

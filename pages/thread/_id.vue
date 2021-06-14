@@ -1,11 +1,11 @@
 <template>
-  <div class="h-full bg-gray-900">
+  <div class="h-full w-full bg-gray-900">
     <navigation />
     <div class="grid grid-cols grid-cols-12 w-full">
       <div class="col-span-2 hidden lg:block">
         <QRCode />
       </div>
-      <thread class="col-start-3 col-span-7 w-full" />
+      <thread class="lg:col-start-3 lg:col-span-7 col-span-12 w-full" />
     </div>
     <Footer />
   </div>
