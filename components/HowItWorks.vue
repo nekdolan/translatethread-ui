@@ -1,7 +1,7 @@
 <template>
-  <div id="techstack">
+  <div id="techstack" class="text-gray-100">
     <div class="w-1/2 mx-auto text-center">
-      <div class="mt-5 mx-auto text-2xl font-normal text-gray-900">
+      <div class="mt-5 mx-auto text-2xl font-normal ">
         How it works
       </div>
       <div class="border-b-2 border-red-400 w-28 mx-auto mt-2"></div>
@@ -10,7 +10,7 @@
       <p>
         <span class="text-xl font-semibold"
           >Using
-          <a href="https://twitter.com/translatethread" class="text-blue-600"
+          <a href="https://twitter.com/translatethread" class="text-blue-400"
             >@translatethread</a
           >
           is a simple process</span
@@ -42,14 +42,14 @@
     <div class="mt-10 w-10/12 mx-auto">
       <div class="grid grid-cols grid-cols-3">
         <div
-          class="col-span-1 w-92 h-80 mr-5 border border-gray-200 rounded-xl hover:bg-gray-50"
+          class="col-span-1 w-92 h-80 mr-5 border border-gray-700 rounded-xl"
         >
           <div
             class="bg-gray-900 font-semibold text-indigo-200 rounded-t-xl text-center p-2"
           >
             Translate Request
           </div>
-          <div class="border-2 border-red-900">
+          <div class="bg-gray-900">
             <blockquote class="twitter-tweet">
               <p lang="en" dir="ltr">
                 <a
@@ -72,41 +72,52 @@
           </div>
         </div>
 
-        <div
-          class="col-span-1 w-92 mr-5 border border-gray-200 rounded-xl hover:bg-gray-50"
-        >
+        <div class="col-span-1 w-92 mr-5 border border-gray-700 rounded-xl">
           <div
-            class="bg-gray-900 font-semibold text-indigo-200 p-2 rounded-t-xl text-center my-auto"
+            class="bg-gray-900 font-semibold text-indigo-200 p-2 rounded-t-xl text-center"
           >
             Translate Response
           </div>
-          <div class="overflow-hidden">
-            <a target="_blank" href="https://golang.org"
-              ><img
-                class="w-full h-full my-auto overflow-hidden"
-                data-src="images/golang.png"
-                alt="Placeholder image"
-                src="https://translatethread.com/images/translatethread-response.png"
-            /></a>
+          <div class="bg-gray-900 -mb-4">
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                hey
+                <a
+                  href="https://twitter.com/rajatjindal1983?ref_src=twsrc%5Etfw"
+                  >@rajatjindal1983</a
+                >, here is the translated thread you requested
+                <a href="https://t.co/8b0jPQlDs7">https://t.co/8b0jPQlDs7</a>
+              </p>
+              &mdash; translatethread (@translatethread)
+              <a
+                href="https://twitter.com/translatethread/status/1403659911683260416?ref_src=twsrc%5Etfw"
+                >June 12, 2021</a
+              >
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
           </div>
         </div>
 
         <div
-          class="col-span-1 w-92 h-72 mr-5 border border-gray-200 rounded-xl"
+          class="col-span-1 w-92 h-72 mr-5 border border-gray-700 rounded-xl"
         >
           <div
             class="bg-gray-900 font-semibold text-indigo-200 p-2 rounded-t-xl text-center my-auto"
           >
             Preview
           </div>
-          <div class="overflow-hidden">
-            <a target="_blank" href="https://golang.org"
-              ><img
-                class="w-full h-full my-auto overflow-hidden"
-                data-src="images/golang.png"
-                alt="Placeholder image"
-                src="https://translatethread.com/images/translatethread-example.png"
-            /></a>
+          <div class="bg-gray-100 border-2 mt-2 p-2 rounded-xl">
+            <div class="rounded-xl h-full bg-gray-900 overflow-hidden">
+              <a
+                target="_blank"
+                href="https://e.translatethread.com/thread/1403659904636706816"
+                ><img class="" alt="Placeholder image" src="/preview.png"
+              /></a>
+            </div>
           </div>
         </div>
       </div>

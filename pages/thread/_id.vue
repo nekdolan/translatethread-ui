@@ -1,7 +1,9 @@
 <template>
-  <div class="h-full w-full bg-gray-900">
+  <div
+    class="min-h-screen h-full w-full bg-gray-900 flex flex-col justify-between"
+  >
     <navigation />
-    <div class="grid grid-cols grid-cols-12 w-full">
+    <div class="grid grid-cols grid-cols-12 w-full mb-auto">
       <div class="col-span-2 hidden lg:block">
         <QRCode />
       </div>
