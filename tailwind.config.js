@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'hero-pattern': "url(https://translatethread.com/images/DSCN0089.webp)",
+        'hero-pattern': "url(https://api.translatethread.com/images/DSCN0089.webp)",
         'footer-texture': "url('/img/footer-texture.png')",
        })
     },

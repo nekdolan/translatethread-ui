@@ -3,14 +3,16 @@
     <div class="mx-auto">
       <div class="flex ml-6 py-3 justify-between items-center">
         <div class="flex text-gray-100 w-full lg:w-2/12">
-          <div class="">
-            <i
-              class="fas fa-language text-blue-300 text-4xl lg:text-5xl mr-2"
-            ></i>
-          </div>
-          <div class="text-center my-auto">
-            <span class="text-xl">Translate Thread</span>
-          </div>
+          <nuxt-link to="/" class="flex">
+            <div class="">
+              <i
+                class="fas fa-language text-blue-300 text-4xl lg:text-5xl mr-2"
+              ></i>
+            </div>
+            <div class="text-center my-auto">
+              <span class="text-xl">Translate Thread</span>
+            </div>
+          </nuxt-link>
         </div>
 
         <div class="hidden lg:flex w-11/12 px-10 justify-between items-left">

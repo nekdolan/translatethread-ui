@@ -55,7 +55,7 @@ export default {
         },
         {
           name: "og:image",
-          content: `https://translatethread.com/${this.$route.params.id}.jpeg`,
+          content: `https://api.translatethread.com/${this.$route.params.id}.jpeg`,
         },
         {
           name: "og:image:alt",
@@ -63,7 +63,7 @@ export default {
         },
         {
           name: "og:url",
-          content: `https://translatethread.com/thread/${this.$route.params.id}`,
+          content: `https://api.translatethread.com/thread/${this.$route.params.id}`,
         },
         {
           name: "og:description",
@@ -103,11 +103,11 @@ export default {
         },
         {
           name: "twitter:image",
-          content: `https://translatethread.com/${this.$route.params.id}.jpeg`,
+          content: `https://api.translatethread.com/${this.$route.params.id}.jpeg`,
         },
         {
           name: "twitter:domain",
-          content: `https://translatethread.com/thread/${this.$route.params.id}`,
+          content: `https://api.translatethread.com/thread/${this.$route.params.id}`,
         },
       ],
     };

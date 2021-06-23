@@ -28,7 +28,29 @@
 
       <div class="fixed bottom-8 right-1/2 sm:top-4 sm:right-4 z-20">
         <div v-on:click="$emit('close', '')">
-          <i class="text-gray-100 text-xl far fa-times-circle"></i>
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z"
+            />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9.75 9.75L14.25 14.25"
+            />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M14.25 9.75L9.75 14.25"
+            />
+          </svg>
         </div>
       </div>
 
@@ -37,7 +59,22 @@
           class="text-gray-100 bg-gray-900 rounded-full py-5 font-bold w-16 h-16"
           v-on:click="currentIndex -= 1"
         >
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M10.25 6.75L4.75 12L10.25 17.25"
+            />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M19.25 12H5"
+            />
+          </svg>
         </div>
       </div>
 
@@ -50,7 +87,22 @@
           v-on:keyup.right="window.alert('hello')"
           v-on:click="currentIndex += 1"
         >
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M13.75 6.75L19.25 12L13.75 17.25"
+            />
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M19 12H4.75"
+            />
+          </svg>
         </div>
       </div>
 

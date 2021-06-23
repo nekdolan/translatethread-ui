@@ -115,7 +115,7 @@
               <a
                 target="_blank"
                 href="https://e.translatethread.com/thread/1403659904636706816"
-                ><img class="" alt="Placeholder image" src="/preview.png"
+                ><img class="" alt="Placeholder image" src="/images/preview.png"
               /></a>
             </div>
           </div>

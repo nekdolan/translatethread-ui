@@ -9,8 +9,7 @@ export default function({ $axios, redirect }, inject) {
     })
 
     // Set baseURL to something different
-    netlify.setBaseURL("https://translatethread.com/")
-    // netlify2.setBaseURL("http://localhost:8080")
+    netlify.setBaseURL("https://api.translatethread.com/")
 
     // Inject to context as $netlify
     inject('netlifyf', netlify)

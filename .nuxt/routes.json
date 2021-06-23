@@ -12,5 +12,12 @@
     "component": "/Users/rajatjindal/go/src/github.com/rajatjindal/translatethread-ui/pages/index.vue",
     "chunkName": "pages/index",
     "_name": "_0f7a0f22"
+  },
+  {
+    "name": "id",
+    "path": "/:id",
+    "component": "/Users/rajatjindal/go/src/github.com/rajatjindal/translatethread-ui/pages/_id.vue",
+    "chunkName": "pages/_id",
+    "_name": "_1325720a"
   }
 ]

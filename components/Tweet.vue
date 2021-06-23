@@ -30,7 +30,7 @@
                   <img
                     v-if="userInfo.verified"
                     class="h-3 w-3 ml-1 mt-1"
-                    src="https://translatethread.com/images/Twitter_Verified_Badge.svg"
+                    src="/images/Twitter_Verified_Badge.svg"
                   />
                 </span>
 

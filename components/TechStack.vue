@@ -14,9 +14,8 @@
           <a target="_blank" href="https://golang.org"
             ><img
               class="transform scale-50 -mt-4"
-              data-src="images/golang.png"
               alt="Placeholder image"
-              src="https://raw.githubusercontent.com/golang-samples/gopher-vector/master/gopher.png"
+              src="/images/gopher.png"
           /></a>
         </div>
         <div
@@ -25,9 +24,8 @@
           <a target="_blank" href="https://k8s.io"
             ><img
               class="transform scale-125"
-              data-src="images/golang.png"
               alt="Placeholder image"
-              src="https://translatethread.com/images/Kubernetes-Logo.wine.svg"
+              src="/images/Kubernetes-Logo.wine.svg"
           /></a>
         </div>
         <div
@@ -36,9 +34,8 @@
           <a target="_blank" href="https://github.com"
             ><img
               class="-mt-2 transform scale-125"
-              data-src="images/golang.png"
               alt="Placeholder image"
-              src="https://translatethread.com/images/GitHub_Logo.png"
+              src="/images/GitHub_Logo.png"
           /></a>
         </div>
         <div
@@ -47,32 +44,18 @@
           <a target="_blank" href="https://netlify.com"
             ><img
               class="transform scale-125 px-2"
-              data-src="images/golang.png"
               alt="Placeholder image"
-              src="https://translatethread.com/images/full-logo-light-simple.png"
+              src="/images/full-logo-light-simple.png"
           /></a>
         </div>
-        <div
-          class="col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
-        >
-          <a target="_blank" href="https://fontawesome.com/"
-            ><img
-              class="transform scale-125 px-2"
-              data-src="images/golang.png"
-              alt="Placeholder image"
-              src="https://fontawesome.com/images/open-graph.png"
-          /></a>
-        </div>
-
         <div
           class="col-span-1 w-40 h-36 pt-6 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
         >
           <a target="_blank" href="https://vuejs.org/"
             ><img
               class="transform scale-125 px-2"
-              data-src="images/golang.png"
               alt="Placeholder image"
-              src="/vuejs.png"
+              src="/images/vuejs.png"
           /></a>
         </div>
 
