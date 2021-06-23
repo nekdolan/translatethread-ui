@@ -1,9 +1,4 @@
 [build]
   publish = "dist"
 
-[[redirects]]
-  from = "/thread/*"
-  to = "/404.html/thread/:splat"
-  status = 200
-  force = true
 
