@@ -2,7 +2,7 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/thread/*"
-  to = "/thread/:splat"
+  from = "/404.html"
+  to = "/404.html"
   status = 200
 
