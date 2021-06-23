@@ -3,7 +3,7 @@
 
 [[redirects]]
   from = "/thread/*"
-  to = "/thread/:splat"
+  to = "/404.html/thread/:splat"
   status = 200
   force = true
 
