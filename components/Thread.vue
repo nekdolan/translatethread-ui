@@ -50,62 +50,77 @@ export default {
           content: "width=device-width, initial-scale=1",
         },
         {
+          hid: "og:title",
           name: "og:title",
           content: "summary_large_image",
         },
         {
+          hid: "og:image",
           name: "og:image",
           content: `https://api.translatethread.com/${this.$route.query.id}.jpeg`,
         },
         {
+          hid: "og:image:alt",
           name: "og:image:alt",
           content: "Translate Thread",
         },
         {
+          hid: "og:url",
           name: "og:url",
           content: `https://api.translatethread.com/thread/${this.$route.query.id}`,
         },
         {
+          hid: "og:description",
           name: "og:description",
           content: `translated version of thread by @${this.authorHandle} is available now.`,
         },
         {
+          hid: "og:image:width",
           name: "og:image:width",
           content: "1200",
         },
         {
+          hid: "og:image:height",
           name: "og:image:height",
           content: "628",
         },
         {
+          hid: "og:image:type",
           name: "og:image:type",
           content: "image/png",
         },
         {
+          hid: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image",
         },
         {
+          hid: "twitter:site",
           name: "twitter:site",
           content: "@translatethread",
         },
         {
+          hid: "twitter:creator",
           name: "twitter:creator",
           content: "@translatethread",
         },
         {
+          hid: "twitter:title",
           name: "twitter:title",
           content: `successfully translated thread by @${this.authorHandle}`,
         },
         {
+          hid: "twitter:description",
           name: "twitter:description",
           content: `translated version of thread by @ ${this.authorHandle} is available now.`,
         },
         {
+          hid: "twitter:image",
           name: "twitter:image",
           content: `https://api.translatethread.com/${this.$route.query.id}.jpeg`,
         },
         {
+          hid: "twitter:domain",
           name: "twitter:domain",
           content: `https://api.translatethread.com/thread/${this.$route.query.id}`,
         },
