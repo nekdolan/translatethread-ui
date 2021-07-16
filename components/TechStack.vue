@@ -6,10 +6,10 @@
       </div>
       <div class="border-b-2 border-red-400 w-48 mx-auto mt-2"></div>
     </div>
-    <div class="mt-10 w-9/12 mx-auto">
-      <div class="grid grid-cols grid-cols-7">
+    <div class="mt-10 w-11/12 md:w-8/12 mx-auto">
+      <div class="grid grid-cols grid-cols-2 lg:grid-cols-6">
         <div
-          class="col-span-1 w-40 h-36 mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
+          class="col-span-1 lg:col-start-1 w-40 h-36 mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
         >
           <a target="_blank" href="https://golang.org"
             ><img
@@ -29,7 +29,7 @@
           /></a>
         </div>
         <div
-          class="col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
+          class="mt-2 lg:mt-0 col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
         >
           <a target="_blank" href="https://github.com"
             ><img
@@ -39,7 +39,7 @@
           /></a>
         </div>
         <div
-          class="col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
+          class="mt-2 lg:mt-0 col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
         >
           <a target="_blank" href="https://netlify.com"
             ><img
@@ -49,7 +49,7 @@
           /></a>
         </div>
         <div
-          class="col-span-1 w-40 h-36 pt-6 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
+          class="mt-2 lg:mt-0 col-span-1 w-40 h-36 pt-6 overflow-hidden mr-5 border border-gray-200 rounded-xl px-4 bg-gray-100 hover:bg-gray-200"
         >
           <a target="_blank" href="https://vuejs.org/"
             ><img
@@ -60,10 +60,10 @@
         </div>
 
         <div
-          class="col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl bg-gray-100 hover:bg-gray-200"
+          class="mt-2 lg:mt-0 col-span-1 w-40 h-36 pt-12 overflow-hidden mr-5 border border-gray-200 rounded-xl bg-gray-100 hover:bg-gray-200"
         >
           <a target="_blank" href="https://tailwindcss.com/"
-            ><svg viewBox="0 0 248 31" class="transform scale-90">
+            ><svg viewBox="0 0 248 31" class="transform scale-90 mt-2">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"

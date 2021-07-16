@@ -1,13 +1,13 @@
 <template>
   <div id="techstack" class="text-gray-100">
-    <div class="w-1/2 mx-auto text-center">
+    <div class="w-full lg:w-1/2 mx-auto text-center">
       <div class="mt-5 mx-auto text-2xl font-normal ">
         How it works
       </div>
       <div class="border-b-2 border-red-400 w-28 mx-auto mt-2"></div>
     </div>
-    <div class="mt-10 w-8/12 mx-auto">
-      <p>
+    <div class="mt-10 w-10/12 lg:w-8/12 mx-auto">
+      <p class="lg:text-left text-center">
         <span class="text-xl font-semibold"
           >Using
           <a href="https://twitter.com/translatethread" class="text-blue-400"
@@ -18,10 +18,10 @@
       </p>
       <p class="mt-5 text-sm">
         <span>
-          <ul class="list-disc list-inside">
-            <li>Find the tweet you want to translate</li>
-            <li>
-              Mention
+          <ul class="list-none list-inside">
+            <li class="mt-1">- Find the tweet you want to translate</li>
+            <li class="mt-1">
+              - Mention
               <a
                 href="https://twitter.com/translatethread"
                 class="text-blue-600"
@@ -30,17 +30,17 @@
               with keyword <span class="text-red-400 italic">doit</span> on the
               last tweet of the thread you want to translate.
             </li>
-            <li>
-              The bot will translate the thread, and reply with the link of
+            <li class="mt-1">
+              - The bot will translate the thread, and reply with the link of
               translatedthread to your tweet.
             </li>
-            <li>e.g.</li>
+            <li class="mt-2">e.g.</li>
           </ul>
         </span>
       </p>
     </div>
     <div class="mt-10 w-10/12 mx-auto">
-      <div class="grid grid-cols grid-cols-3">
+      <div class="grid grid-cols lg:grid-cols-3 grid-cols-1">
         <div
           class="col-span-1 w-92 h-80 mr-5 border border-gray-700 rounded-xl"
         >
@@ -72,7 +72,9 @@
           </div>
         </div>
 
-        <div class="col-span-1 w-92 mr-5 border border-gray-700 rounded-xl">
+        <div
+          class="col-span-1 w-92 mr-5 border border-gray-700 rounded-xl mt-40 lg:mt-0"
+        >
           <div
             class="bg-gray-900 font-semibold text-indigo-200 p-2 rounded-t-xl text-center"
           >
@@ -103,7 +105,7 @@
         </div>
 
         <div
-          class="col-span-1 w-92 h-72 mr-5 border border-gray-700 rounded-xl"
+          class="col-span-1 w-92 h-44 lg:h-72 mr-5 border border-gray-700 rounded-xl mt-20 lg:mt-0"
         >
           <div
             class="bg-gray-900 font-semibold text-indigo-200 p-2 rounded-t-xl text-center my-auto"
