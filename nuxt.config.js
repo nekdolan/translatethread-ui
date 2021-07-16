@@ -1,13 +1,13 @@
 import 'dotenv/config'
 
 export default {
-  ssr: false,
-  target: 'static',
-  /*
-  ** Headers of the page
-  */
+  target: 'server',
+  serverMiddleware: ['~/server-middleware/logger'],
   head: {
     title: 'Translate Thread',
+    htmlAttrd: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,13 +19,7 @@ export default {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.css', defer: true },
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
   css: [
   ],
 
@@ -44,6 +38,7 @@ export default {
     '~/plugins/vue-clipboard',
     '~/plugins/vue-userinfo',
   ],
+  
   /*
   ** Nuxt.js modules
   */

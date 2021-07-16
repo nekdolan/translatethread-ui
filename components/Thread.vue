@@ -26,6 +26,16 @@ export default {
       authorHandle: "",
     };
   },
+  async fetch() {
+    const res = await this.fetchTranslatedThread(this.$route.params.id);
+    this.threadObject = res.data;
+    this.title =
+      this.threadObject.Thread[0].Author +
+      " @" +
+      this.threadObject.Thread[0].AuthorHandle;
+
+    this.authorHandle = this.threadObject.Thread[0].AuthorHandle;
+  },
   head() {
     return {
       title: this.title,
@@ -52,12 +62,12 @@ export default {
         {
           hid: "og:title",
           name: "og:title",
-          content: "summary_large_image",
+          content: `successfully translated thread by @${this.authorHandle}`,
         },
         {
           hid: "og:image",
           name: "og:image",
-          content: `https://api.translatethread.com/${this.$route.query.id}.jpeg`,
+          content: `https://api.translatethread.com/${this.$route.params.id}.jpeg`,
         },
         {
           hid: "og:image:alt",
@@ -67,7 +77,7 @@ export default {
         {
           hid: "og:url",
           name: "og:url",
-          content: `https://api.translatethread.com/thread/${this.$route.query.id}`,
+          content: `https://api.translatethread.com/thread/${this.$route.params.id}`,
         },
         {
           hid: "og:description",
@@ -112,17 +122,17 @@ export default {
         {
           hid: "twitter:description",
           name: "twitter:description",
-          content: `translated version of thread by @ ${this.authorHandle} is available now.`,
+          content: `translated version of thread by @${this.authorHandle} is available now.`,
         },
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: `https://api.translatethread.com/${this.$route.query.id}.jpeg`,
+          content: `https://api.translatethread.com/${this.$route.params.id}.jpeg`,
         },
         {
           hid: "twitter:domain",
           name: "twitter:domain",
-          content: `https://api.translatethread.com/thread/${this.$route.query.id}`,
+          content: `https://api.translatethread.com/thread/${this.$route.params.id}`,
         },
       ],
     };
@@ -132,21 +142,6 @@ export default {
     // everything has be rehydrated.
     const id = this.$route.hash.replaceAll("#", "");
     this.$nextTick(() => this.scrollFix('[id="' + id + '"]'));
-  },
-  beforeMount: function() {
-    this.fetchTranslatedThread(this.$route.query.id)
-      .then((res) => {
-        this.threadObject = res.data;
-        this.title =
-          this.threadObject.Thread[0].Author +
-          " @" +
-          this.threadObject.Thread[0].AuthorHandle;
-
-        this.authorHandle = this.threadObject.Thread[0].AuthorHandle;
-      })
-      .catch((error) => {
-        console.log(error.response);
-      });
   },
   methods: {
     ...mapActions({ fetchTranslatedThread: "thread/fetchTranslatedThread" }),

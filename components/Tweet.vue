@@ -96,11 +96,15 @@ export default {
       return this.getUserInfo(this.tweet.AuthorID);
     },
     newLinesInterpreted: function() {
-      if (!this.tweet || !this.tweet.TranslatedText) {
+      if (
+        !this.tweet ||
+        !this.tweet.TranslatedText ||
+        this.tweet.TranslatedText == ""
+      ) {
         return;
       }
 
-      return this.tweet.TranslatedText.replaceAll("\n", "<br/>");
+      return this.tweet.TranslatedText.replace(/\n/g, "<br/>");
     },
     permaLink: function() {
       console.log(window.location);

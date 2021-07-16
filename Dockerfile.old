@@ -1,0 +1,20 @@
+FROM node:14 as builder
+
+WORKDIR /usr/src/app
+
+COPY . ./
+RUN yarn
+
+RUN yarn build
+
+FROM gcr.io/distroless/nodejs:14
+
+EXPOSE 8080
+
+ENV HOST=0.0.0.0
+ENV PORT=8080
+
+COPY --from=builder /usr/src/app /usr/src/app/
+WORKDIR /usr/src/app
+
+CMD [ "node_modules/nuxt/bin/nuxt.js", "start" ]
