@@ -97,7 +97,7 @@ export default {
         "https://twitter.com/intent/tweet?text=Read the translated version of thread by " +
         this.summary.Author +
         " here " +
-        "https://x.translatethread.com" +
+        "https://translatethread.com" +
         this.$route.fullPath
       );
     },
