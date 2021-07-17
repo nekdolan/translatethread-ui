@@ -97,7 +97,8 @@ export default {
         "https://twitter.com/intent/tweet?text=Read the translated version of thread by " +
         this.summary.Author +
         " here " +
-        window.location.href
+        "https://translatethread.com" +
+        this.$route.fullPath
       );
     },
   },

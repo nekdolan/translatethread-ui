@@ -6,7 +6,7 @@
       </div>
       <div class="border-b-2 border-red-400 w-28 mx-auto mt-2"></div>
     </div>
-    <div class="mt-10 w-1/2 mx-auto">
+    <div class="mt-10 w-10/12 lg:w-1/2 mx-auto">
       <img src="/images/translatethread.png" class="mx-auto" />
     </div>
   </div>

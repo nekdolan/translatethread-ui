@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: translatethread-ui-com
+  namespace: tools
+  labels:
+    app: translatethread-ui-com
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: translatethread-ui-com
+  template:
+    metadata:
+      labels:
+        app: translatethread-ui-com
+    spec:
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com
+      containers:
+        - name: service
+          image: ghcr.io/rajatjindal/translatethread-ui:v0.0.10
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

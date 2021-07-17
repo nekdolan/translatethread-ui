@@ -4,7 +4,7 @@ export default {
   beforeMount: function() {
     console.log(this.$route.params.id);
     window.location.href =
-      "https://legacy.translatethread.com/" + this.$route.params.id;
+      "https://l.translatethread.com/" + this.$route.params.id;
   },
 };
 </script>
