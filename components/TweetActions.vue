@@ -1,5 +1,8 @@
 <template>
-  <div v-if="false" class="grid grid-cols grid-cols-5 text-left mt-4 text-xl">
+  <div
+    v-if="false"
+    class="grid grid-cols grid-cols-5 text-left mt-4 text-xl pt-2"
+  >
     <div
       class="text-gray-400 w-8 h-8 rounded-full hover:bg-blue-200 hover:text-blue-600 flex items-center justify-center"
       id="comment"
