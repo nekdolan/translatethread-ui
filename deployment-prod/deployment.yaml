@@ -19,7 +19,7 @@ spec:
         - name: dockerconfigjson-github-com
       containers:
         - name: service
-          image: ghcr.io/rajatjindal/translatethread-ui:v0.0.10
+          image: ghcr.io/rajatjindal/translatethread-ui:v0.0.11
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

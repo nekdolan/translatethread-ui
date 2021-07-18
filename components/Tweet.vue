@@ -129,8 +129,8 @@ export default {
 
       if (ageInHours < 24) {
         var d = dateMoment.fromNow(todayMoment);
-        d = d.replaceAll(" hours", "h");
-        d = d.replaceAll(" minutes", "m");
+        d = d.replace(/ hours/, "h");
+        d = d.replace(/ minutes/, "m");
 
         return d;
       }
