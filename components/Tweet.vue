@@ -26,7 +26,7 @@
             <div class="flex lg:flex-col text-left">
               <div class="flex">
                 <span class="flex font-semibold text-sm">
-                  {{ tweet.Author }}
+                  {{ trimmedAuthor }}
                   <img
                     v-if="userInfo.verified"
                     class="h-3 w-3 ml-1 mt-1"
@@ -45,9 +45,16 @@
             <div class="mt-2 mr-4 text-left text-sm">
               <p v-html="newLinesInterpreted"></p>
             </div>
-            <div v-if="tweet.MediaEntities" class="mr-4 lg:mr-0 lg:ml-0">
+            <div
+              v-if="tweet.MediaEntities && tweet.MediaEntities.length > 0"
+              class="mr-4 lg:mr-0 lg:ml-0"
+            >
+              <video-one
+                v-if="tweet.MediaEntities[0].type == 'video'"
+                :mediaEntities="tweet.MediaEntities"
+              />
               <image-one
-                v-if="tweet.MediaEntities.length == 1"
+                v-else-if="tweet.MediaEntities.length == 1"
                 :mediaEntities="tweet.MediaEntities"
               />
               <image-two
@@ -76,11 +83,19 @@ import ImageOne from "./ImageOne.vue";
 import ImageTwo from "./ImageTwo.vue";
 import ImageThree from "./ImageThree.vue";
 import ImageFour from "./ImageFour.vue";
+import VideoOne from "./VideoOne.vue";
 import TweetActions from "./TweetActions.vue";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  components: { ImageOne, ImageTwo, ImageThree, ImageFour, TweetActions },
+  components: {
+    ImageOne,
+    ImageTwo,
+    ImageThree,
+    ImageFour,
+    TweetActions,
+    VideoOne,
+  },
   name: "Tweet",
   props: ["tweet"],
   beforeMount: function() {
@@ -88,6 +103,13 @@ export default {
   },
   computed: {
     ...mapGetters("userinfo", ["getUserInfo"]),
+    trimmedAuthor: function() {
+      if (this.tweet.Author.length + this.tweet.AuthorHandle.length > 30) {
+        return this.tweet.Author.substring(0, 13) + "...";
+      }
+
+      return this.tweet.Author;
+    },
     userInfo: function() {
       if (!this.getUserInfo(this.tweet.AuthorID)) {
         return {};

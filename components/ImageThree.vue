@@ -12,9 +12,7 @@
         />
       </div>
       <div class="flex w-1/2 flex-col ml-0.5">
-        <div
-          class="h-1/2 border border-gray-300 border-2 overflow-hidden rounded-tr-xl"
-        >
+        <div class="h-1/2 border border-gray-300 overflow-hidden rounded-tr-xl">
           <img
             class="h-full w-full"
             v-on:click="clicked(1)"
